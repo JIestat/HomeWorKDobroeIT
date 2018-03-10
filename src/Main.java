@@ -6,12 +6,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Math sum = new Math();
 
+        System.out.println("Введите  число A: ");
         int a = scanner.nextInt();
+        System.out.println("Введите  число B: ");
         int b = scanner.nextInt();
+        System.out.println("Введите  число C: ");
         int c = scanner.nextInt();
 
         int totalSum = sum.addPositiveNumbers(a,b,c);
-        System.out.println(totalSum);
+        System.out.println("Сумма чисел: "+totalSum);
     }
 
 }
