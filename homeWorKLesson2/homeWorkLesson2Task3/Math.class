@@ -1,0 +1,14 @@
+public class Math {
+
+    public static void twoDimensionalArray(int[][]array){
+        int columnSize = 2;
+        int lineSize = 6;
+
+        for (int i = 0; i <columnSize ; i++) {
+            for (int j = 0; j <lineSize ; j++) {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}

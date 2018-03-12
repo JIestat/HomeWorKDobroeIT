@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        Math resultSumArray = new Math();
+        int array[] = {0,1,2,3,4,5,6,7,8,9};
+        int result = resultSumArray.getSumOfNumbersThatDivideWithoutResidue(array);
+        System.out.println(result);
+		
+    }
+}
+
+/*2. Написать метод, который принимает на вход массив целых чисел и возвращает сумму тех, которые делятся на 2 без остатка.*/
