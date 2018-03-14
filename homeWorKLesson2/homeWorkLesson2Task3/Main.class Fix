@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        Math math = new Math();
+
+        System.out.println("Ведите количество строк в массиве: ");
+        int lineLength = scanner.nextInt();
+        math.setLineLength(lineLength);
+
+        System.out.println("Ведите количество столбцов массива: ");
+        int columnLength = scanner.nextInt();
+        math.setColumnLength(columnLength);
+
+        int array [][] = new int[lineLength][columnLength];
+        math.fillArrayNumbers(array);
+        math.twoDimensionalArray(array);
+
+
+
+
+
+       
+    }
+}
+
+/*3. Написать программу, которая принимает на вход двумерный массив, печатает его содержимое и ничего не возвращает. (реализовать с помощью вложенных циклов).*/
