@@ -1,0 +1,30 @@
+public class Math {
+
+    public static int addPositiveNumbers(int a, int b, int c) {
+
+        if (a > 0) {
+            System.out.println("Число А:"+a+" не отрицательное суммируем ");
+        } else {
+            System.out.println("Число A:"+a+"  отрицательное число не суммируем ");
+            a = 0;
+        }
+
+        if (b > 0) {
+            System.out.println("Число В:"+b+" не отрицательное суммируем ");
+        } else {
+            System.out.println("Число B:"+b+" отрицательное число не суммируем ");
+            b = 0;
+        }
+
+        if (c > 0) {
+            System.out.println("Число C:"+b+" не отрицательное суммируем ");
+        } else {
+            System.out.println("Число C:"+c+"  отрицательное число не суммируем ");
+            c=0;
+        }
+        System.out.println();
+        int result = a+b+c;
+        return result;
+    }
+
+}
