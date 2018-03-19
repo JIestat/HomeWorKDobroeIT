@@ -19,12 +19,13 @@ class Util {
 
 
 
-    public static int getFilterName(String name,char[]consonatArray){
+    public static int getFilterName(String name){
+        char []consonatArray = new char[ ]{'B','C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'};
 
         int result = 0;
         for (int i = 0; i <name.length(); i++) {
             for (int j = 0; j <consonatArray.length ; j++) {
-                if ((name.charAt(i)==consonatArray[i])){
+                if (name.charAt(i)==consonatArray[i]){
                     result++;
                 }
             }
@@ -43,7 +44,7 @@ class Util {
             }else {
                 int nameFilterConsonants = resultFilterName;
                 if (nameFilterConsonants>4){
-                    System.out.println(" у Тобика в имени много согласных удалчем: "+array[i].getAge()+" "+array[i].getName());
+                    System.out.println(" у Тобика в имени много согласных удаляем: "+array[i].getAge()+" "+array[i].getName());
                     //array[i]=null; - опционально  в условии не сказано  удалять  кота не соответствующим критериям или остаивть
                 }
             }
