@@ -25,7 +25,7 @@ class Util {
         int result = 0;
         for (int i = 0; i <name.length(); i++) {
             for (int j = 0; j <consonatArray.length ; j++) {
-                if (name.charAt(i)==consonatArray[i]){
+                if (name.charAt(i)==consonatArray[j]){
                     result++;
                 }
             }
@@ -34,7 +34,7 @@ class Util {
     }
 
 
-    public static void getFilter(Animal[] array, int resultFilterName){
+    public static void getFilter(Animal[] array){
         for (int i = 0; i <array.length ; i++) {
             if (array[i].getClass().equals(Cat.class)){
                 if(array[i].getAge()<1||array[i].getAge()>8){
@@ -42,9 +42,9 @@ class Util {
                     //   array[i] = null; - опционально  в условии не сказано  удалять  кота не соответствующим критериям или остаивть
                 }
             }else {
-                int nameFilterConsonants = resultFilterName;
+                int nameFilterConsonants = Util.getFilterName(array[i].getName().toUpperCase());
                 if (nameFilterConsonants>4){
-                    System.out.println(" у Тобика в имени много согласных удаляем: "+array[i].getAge()+" "+array[i].getName());
+                    System.out.println(" Y Тобика в имени много согласных удалчем: "+array[i].getAge()+" "+array[i].getName());
                     //array[i]=null; - опционально  в условии не сказано  удалять  кота не соответствующим критериям или остаивть
                 }
             }
