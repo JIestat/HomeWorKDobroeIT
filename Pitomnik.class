@@ -15,19 +15,20 @@ public  class Pitomnik {
     }
 
 
-    public void addAnimalPitomnik(Object object, int start, int end){
-        for (int i = 0; i <animal.length ; i++) {
-            if (animal[i].getClass().equals(object)){
-                int age = animal[i].getAge();
-                while (age >= start && age <= end){
-                    System.out.println(animal[i]);
-                    break;
+   public void addAnimalToPitomnik(Animal[] animals , int start, int end){
+        for (int i = 0; i < animals.length ; i++) {
+            int age = animals[i].getAge();
+            if (animals[i].getClass().equals(Cat.class)){
+                if (age >= start && age <= end){
+                    System.out.println(animals[i]);
+                }
+            }else {
+                if (age >= start && age <= end){
+                    System.out.println(animals[i]);
                 }
             }
         }
     }
-
-
 
 
 
