@@ -1,0 +1,41 @@
+
+public  class Pitomnik {
+
+    private  Animal [] animal = new Animal[8];
+
+    public void addAnimal(Animal[] array){
+        for (int i = 0; i <animal.length ; i++) {
+            if (array.length == animal.length) {
+                animal[i]=array[i] ;
+            }else {
+                // тут  будет ошибка java.lang.ArrayIndexOutOfBoundsException
+                System.out.println("Питомник переполнен");
+            }
+        }
+    }
+
+
+    public void addAnimalPitomnik(Object object, int start, int end){
+        for (int i = 0; i <animal.length ; i++) {
+            if (animal[i].getClass().equals(object)){
+                int age = animal[i].getAge();
+                while (age >= start && age <= end){
+                    System.out.println(animal[i]);
+                    break;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    public Animal[] getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal[] animal) {
+        this.animal = animal;
+    }
+}
