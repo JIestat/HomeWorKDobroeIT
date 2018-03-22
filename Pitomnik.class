@@ -1,12 +1,12 @@
 
 public  class Pitomnik {
 
-   private  Animal [] animals = new Animal[8];
-   
+    private  Animal [] animals = new Animal[8];
+
     public void addAnimal(Animal[] array){
-        for (int i = 0; i <animal.length ; i++) {
-            if (array.length == animal.length) {
-                animal[i]=array[i] ;
+        for (int i = 0; i < animals.length ; i++) {
+            if (array.length == animals.length) {
+                animals[i]=array[i] ;
             }else {
                 // тут  будет ошибка java.lang.ArrayIndexOutOfBoundsException
                 System.out.println("Питомник переполнен");
@@ -15,7 +15,7 @@ public  class Pitomnik {
     }
 
 
-   public void addAnimalToPitomnik(Animal[] animals , int start, int end){
+    public void printAnimalToPitomnik(Animal[] animals , int start, int end){
         for (int i = 0; i < animals.length ; i++) {
             int age = animals[i].getAge();
             if (animals[i].getClass().equals(Cat.class)){
@@ -32,11 +32,13 @@ public  class Pitomnik {
 
 
 
-    public Animal[] getAnimal() {
-        return animal;
+
+
+    public Animal[] getAnimals() {
+        return animals;
     }
 
-    public void setAnimal(Animal[] animal) {
-        this.animal = animal;
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
     }
 }
