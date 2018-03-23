@@ -38,13 +38,13 @@ class Util {
             if (array[i].getClass().equals(Cat.class)){
                 if(array[i].getAge()<1||array[i].getAge()>8){
                     System.out.println("Котейку удаляем из массива: "+" "+array[i].getAge()+" "+ array[i].getName()+" "+array[i].getBreed());
-                    //   array[i] = null; - опционально  в условии не сказано  удалять  кота не соответствующим критериям или остаивть
+                   
                 }
             }else {
                 int nameFilterConsonants = Util.getFilterName(array[i].getName().toUpperCase());
                 if (nameFilterConsonants>4){
-                    System.out.println("Y Тобика в имени много согласных удалчем: "+array[i].getAge()+" "+array[i].getName());
-                    //array[i]=null; - опционально  в условии не сказано  удалять  кота не соответствующим критериям или остаивть
+                    System.out.println("Y Тобика в имени много согласных удаляем: "+array[i].getAge()+" "+array[i].getName());
+                   
                 }
             }
         }
