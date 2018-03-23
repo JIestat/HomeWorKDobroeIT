@@ -1,0 +1,44 @@
+
+public  class Pitomnik {
+
+    private  Animal [] animals = new Animal[8];
+
+    public void addAnimalToShelter(Animal animal) {
+        for (int i = 0; i <animals.length ; i++) {
+            if (animals[i]==null){
+                animals[i]=animal;
+                break;
+            }
+        }
+    }
+
+        public void printAnimalToShelter(Object obj, int start, int end){
+
+        for (int i = 0; i < animals.length ; i++) {
+            if (animals[i].getClass().equals(obj)){
+              int  age = animals[i].getAge();
+                while (age >= start && age <= end){
+                    System.out.println(animals[i]);
+                    break;
+                }
+            }
+
+        }
+    }
+
+
+
+
+    public Animal[] getAnimals() {
+        for (int i = 0; i <animals.length ; i++) {
+            if (animals[i] != null) {
+                System.out.println(animals[i]);
+            }
+        }
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+}
