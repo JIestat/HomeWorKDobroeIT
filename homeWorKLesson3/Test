@@ -1,13 +1,15 @@
-private Animal[] animals = new Animal[5];
+public  class Pitomnik {
+
+    private Animal[] animals = new Animal[5];
     private Animal[] newSpaciousArrayForAnimals;
-    private int countArrayAnimals = 0;
+    private int indexArrayAnimals = 0;
 
     public void add(Animal animal) {
-        if (animals.length != countArrayAnimals) {
-            animals[countArrayAnimals] = animal;
-            countArrayAnimals++;
+        if (animals.length != indexArrayAnimals) {
+            animals[indexArrayAnimals] = animal;
+            indexArrayAnimals++;
         }else {
-            int addSizeCount = countArrayAnimals +10;
+            int addSizeCount = indexArrayAnimals +10;
              newSpaciousArrayForAnimals  = new Animal[addSizeCount];
             for (int i = 0; i <animals.length ; i++) {
                 newSpaciousArrayForAnimals[i] = animals[i];
