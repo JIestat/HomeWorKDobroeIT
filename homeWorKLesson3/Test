@@ -15,4 +15,10 @@ public  class Pitomnik {
                 newSpaciousArrayForAnimals[i] = animals[i];
             }
         }
-    }
+        
+         public void printAllAnimals() {
+        for (int i = 0; i < newSpaciousArrayForAnimals.length; i++) {
+            System.out.println(newSpaciousArrayForAnimals[i]);
+        }
+    }    
+ }
