@@ -1,0 +1,16 @@
+private Animal[] animals = new Animal[5];
+    private Animal[] newSpaciousArrayForAnimals;
+    private int countArrayAnimals = 0;
+
+    public void add(Animal animal) {
+        if (animals.length != countArrayAnimals) {
+            animals[countArrayAnimals] = animal;
+            countArrayAnimals++;
+        }else {
+            int addSizeCount = countArrayAnimals +10;
+             newSpaciousArrayForAnimals  = new Animal[addSizeCount];
+            for (int i = 0; i <animals.length ; i++) {
+                newSpaciousArrayForAnimals[i] = animals[i];
+            }
+        }
+    }
