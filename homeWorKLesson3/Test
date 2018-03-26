@@ -5,24 +5,28 @@ public  class Pitomnik {
     private int indexArrayAnimals = 0;
 
     public void add(Animal animal) {
-        if (animals.length != indexArrayAnimals) {
-            animals[indexArrayAnimals] = animal;
-            indexArrayAnimals++;
-        }else {
-            int addSizeSpace = indexArrayAnimals + 10;
-             newSpaciousArrayForAnimals  = new Animal[addSizeSpace];
-            for (int i = 0; i <animals.length ; i++) {
-                newSpaciousArrayForAnimals[i] = animals[i];
+            if (animal==null){
+               return;
             }
-            animals = newSpaciousArrayForAnimals;
-            animals[indexArrayAnimals]=animal;
-            indexArrayAnimals++;
+            if (animals.length != indexArrayAnimals) {
+                animals[indexArrayAnimals] = animal;
+                indexArrayAnimals++;
+            } else {
+                int addSizeSpace = indexArrayAnimals + 10;
+                newSpaciousArrayForAnimals = new Animal[addSizeSpace];
+                for (int i = 0; i < animals.length; i++) {
+                    newSpaciousArrayForAnimals[i] = animals[i];
+                }
+                animals = newSpaciousArrayForAnimals;
+                animals[indexArrayAnimals] = animal;
+                indexArrayAnimals++;
         }
     }
-
     public void print(Class  clazz, int startOfRange, int endOfRange) {
-
         for (int i = 0; i < animals.length; i++) {
+            if (animals[i]==null){
+                break;
+            }
             if (animals[i].getClass().equals(clazz)) {
                 int age = animals[i].getAge();
                 if (age >= startOfRange && age <= endOfRange) {
@@ -34,8 +38,8 @@ public  class Pitomnik {
     }
 
     public void printAllAnimals() {
-        for (int i = 0; i < newSpaciousArrayForAnimals.length; i++) {
-            System.out.println(newSpaciousArrayForAnimals[i]);
+        for (int i = 0; i < animals.length; i++) {
+            System.out.println(animals[i]);
         }
     }
 }
