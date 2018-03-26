@@ -25,7 +25,7 @@ public  class Pitomnik {
     public void print(Class  clazz, int startOfRange, int endOfRange) {
         for (int i = 0; i < animals.length; i++) {
             if (animals[i]==null){
-                break;
+                return;
             }
             if (animals[i].getClass().equals(clazz)) {
                 int age = animals[i].getAge();
