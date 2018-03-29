@@ -1,0 +1,19 @@
+import java.util.Arrays;
+
+public class Util {
+
+    public  static  int []outputArray(int[]inputArray){
+        if (inputArray.length==0) {
+            return inputArray;
+        }
+        Arrays.sort(inputArray);
+        int maxValue = inputArray[inputArray.length-1];
+        int []outputArray = new int[maxValue+1];
+
+        for (int i = 0; i <inputArray.length ; i++) {
+            int value = inputArray[i];
+            outputArray[value]++;
+        }
+        return outputArray;
+    }
+}
