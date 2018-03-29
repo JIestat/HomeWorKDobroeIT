@@ -1,0 +1,18 @@
+public class Main {
+
+    public static void main(String[] args) {
+       Cat cat0 = new Cat(8,"Тузик");
+       Cat cat1 = new Cat(8,"Тузик");
+        System.out.println(cat0.equals(cat1)); //false
+        cat0=cat1;
+        System.out.println(cat0.equals(cat1)); //true
+        //Equals   возвращает  либо true либо false...
+        // 2 разных обьекта не могут быть распознаные как одинаковые, могут в том случае если ссылки будут ссылаться на один и тот же обьект! 
+    }
+}
+
+
+/* Задание. Сделать так, что бы животные одинакового типа и с одинаковым возрастом и именем при проверке на equals были распознаны, 
+как одинаковые!*/
+
+Это, что за бред такой ???
