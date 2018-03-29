@@ -1,44 +1,44 @@
-
 public  class Pitomnik {
 
-    private  Animal [] animals = new Animal[8];
+    private Animal[] animals = new Animal[5];
+    private Animal[] newSpaciousArrayForAnimals;
+    private int indexArrayAnimals = 0;
 
-    public void addAnimalToShelter(Animal animal) {
-        for (int i = 0; i <animals.length ; i++) {
+    public void add(Animal animal) {
+            if (animal==null){
+               return;
+            }
+            if (animals.length != indexArrayAnimals) {
+                animals[indexArrayAnimals] = animal;
+                indexArrayAnimals++;
+            } else {
+                int addSizeSpace = indexArrayAnimals + 10;
+                newSpaciousArrayForAnimals = new Animal[addSizeSpace];
+                for (int i = 0; i < animals.length; i++) {
+                    newSpaciousArrayForAnimals[i] = animals[i];
+                }
+                animals = newSpaciousArrayForAnimals;
+                animals[indexArrayAnimals] = animal;
+                indexArrayAnimals++;
+        }
+    }
+    public void print(Class  clazz, int startOfRange, int endOfRange) {
+        for (int i = 0; i < animals.length; i++) {
             if (animals[i]==null){
-                animals[i]=animal;
                 break;
             }
-        }
-    }
-
-        public void printAnimalToShelter(Object obj, int start, int end){
-
-        for (int i = 0; i < animals.length ; i++) {
-            if (animals[i].getClass().equals(obj)){
-              int  age = animals[i].getAge();
-                while (age >= start && age <= end){
+            if (animals[i].getClass().equals(clazz)) {
+                int age = animals[i].getAge();
+                if (age >= startOfRange && age <= endOfRange) {
                     System.out.println(animals[i]);
-                    break;
                 }
             }
-
         }
     }
 
-
-
-
-    public Animal[] getAnimals() {
-        for (int i = 0; i <animals.length ; i++) {
-            if (animals[i] != null) {
-                System.out.println(animals[i]);
-            }
+    public void printAllAnimals() {
+        for (int i = 0; i < animals.length; i++) {
+            System.out.println(animals[i]);
         }
-        return animals;
-    }
-
-    public void setAnimals(Animal[] animals) {
-        this.animals = animals;
     }
 }
