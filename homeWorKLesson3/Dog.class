@@ -1,10 +1,5 @@
 public class Dog extends Animal{
-
-    private  int age;
-    private  String name;
-    private  String breed;
-
-
+    
     Dog(int age, String name, String breed) {
         super(age, name, breed);
     }
