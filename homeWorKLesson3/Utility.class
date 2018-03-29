@@ -1,23 +1,6 @@
-import java.util.ArrayList;
-
+import java.util.Arrays;
 
 class Util {
-
-    static ArrayList animal = new ArrayList();
-
-
-    public static void addAnimalToList (Object object){
-        animal.add(object);
-    }
-
-    public static int getSizeListCreateAnimal(){
-        for (int i = 0; i <animal.size() ; i++) {
-        }
-        return animal.size();
-    }
-
-
-
 
     public static int getFilterName(String name){
         char []consonatArray = new char[ ]{'B','C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'};
@@ -37,20 +20,35 @@ class Util {
         for (int i = 0; i <array.length ; i++) {
             if (array[i].getClass().equals(Cat.class)){
                 if(array[i].getAge()<1||array[i].getAge()>8){
-                    System.out.println("Котейку удаляем из массива: "+" "+array[i].getAge()+" "+ array[i].getName()+" "+array[i].getBreed());
-                   
+                    System.out.println("Котейку удаляем из массива, так как не сответсветстуют возрастным критериям: "+" "+array[i].getAge()+" "+ array[i].getName()+" "+array[i].getBreed());
+                        array[i]=null;
                 }
             }else {
                 int nameFilterConsonants = Util.getFilterName(array[i].getName().toUpperCase());
                 if (nameFilterConsonants>4){
-                    System.out.println("Y Тобика в имени много согласных удаляем: "+array[i].getAge()+" "+array[i].getName());
-                   
+                    System.out.println("Y Тобика в имени много согласных удаляем так как не сответсветстуют критериям:: "+array[i].getAge()+" "+array[i].getName());
+                    array[i]=null;
                 }
             }
         }
+    }
 
+        public  static  int []outputArray(int[]inputArray){
+            if (inputArray.length==0) {
+                return inputArray;
+            }
+            Arrays.sort(inputArray);
+            int maxValue = inputArray[inputArray.length-1];
+            int []outputArray = new int[maxValue+1];
+
+            for (int i = 0; i <inputArray.length ; i++) {
+                int value = inputArray[i];
+                outputArray[value]++;
+            }
+            return outputArray;  
+        }
     }
 
 
 
-}
+
