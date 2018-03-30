@@ -19,6 +19,7 @@ public class Main {
         Animal cat4 = new Cat(1,"TestNameCat4","TestBreedDog5");
         Animal cat5 = new Cat(2,"TestNameCat5","TestBreedDog5");
         cat0.voice();
+        System.out.println(Animal.countAnimals);
 
 
         Animal[] animals = new  Animal[8];
