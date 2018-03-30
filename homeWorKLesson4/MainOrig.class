@@ -3,15 +3,16 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("--------------------------------" + "Задание 1" + "----------------------------------------");
+       System.out.println("--------------------------------" + "Задание 1" + "----------------------------------------");
         //Сделать так, чтобы животные одинакового типа и с одинаковым возрастом и именем
         // при проверке на equals были распознаны, как одинаковые.
-        Cat cat0 = new Cat(8, "Тузик");
-        Cat cat1 = new Cat(8, "Тузик");
-        Dog dog24 = new Dog(1, "Pif");
+        Animal cat0 = new Cat(8, "Тузик");
+        Animal cat1 = new Cat(8, "Тузик");
+        Animal dog24 = new Dog(1, "Pif");
         System.out.println(cat0.equals(dog24));
         System.out.println(cat0.equals(cat0));
-        System.out.println(cat0.equals(cat1) + "\n"); 
+        System.out.println(cat0.equals(cat1) + "\n");
+
 
         System.out.println("--------------------------------" + "Задание 2" + "----------------------------------------");
         // Реализовать метод toString() в супертипе, чтобы он печатал информацию о типе животного, возрасте и имени
