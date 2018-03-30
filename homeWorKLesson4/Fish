@@ -1,0 +1,9 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+public class Fish extends Animal {
+
+    @Override
+    public void  voice() throws NotImplementedException {
+        throw new NotImplementedException();
+    }
+}
