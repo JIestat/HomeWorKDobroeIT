@@ -1,0 +1,17 @@
+
+public class Dog extends Animal {
+    Dog(int age, String name) {
+        super(age, name);
+    }
+
+    @Override
+    void dyingVoice() {
+        System.out.println("Bark bark! Don't kill me Mater!!! NOOOOOOOOOOO!!!!!");
+    }
+
+    @Override
+    protected void finalize() {
+        dyingVoice();
+
+    }
+}
