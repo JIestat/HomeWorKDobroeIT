@@ -11,9 +11,5 @@ public class Cat extends Animal {
         System.out.println("Meow Meow! Don't kill me Mater!!! NOOOOOOOOOOO!!!!!");
     }
 
-    @Override
-    protected void finalize() {
-        dyingVoice();
-
-    }
+  
 }
