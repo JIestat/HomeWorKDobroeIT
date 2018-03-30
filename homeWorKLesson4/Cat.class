@@ -1,0 +1,19 @@
+
+public class Cat extends Animal {
+
+    Cat(int age, String name) {
+        super(age, name);
+    }
+
+
+    @Override
+    void dyingVoice() {
+        System.out.println("Meow Meow! Don't kill me Mater!!! NOOOOOOOOOOO!!!!!");
+    }
+
+    @Override
+    protected void finalize() {
+        dyingVoice();
+
+    }
+}
