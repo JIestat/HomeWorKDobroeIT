@@ -6,7 +6,7 @@ public class Dog extends Animal {
 
     @Override
     public void dyingVoice() {
-        System.out.println("Bark bark! Don't kill me Mater!!! NOOOOOOOOOOO!!!!!");
+        System.out.println("Bark bark! Don't kill me Master!!! NOOOOOOOOOOO!!!!!");
     }
 
     @Override
