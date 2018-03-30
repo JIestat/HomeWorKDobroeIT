@@ -1,8 +1,13 @@
 
+
 public class Animal {
     private int age;
     private String name;
 
+
+    Animal(){
+    }
+    
     Animal(int age, String name){
         this.age = age;
         this.name = name;
@@ -33,13 +38,16 @@ public class Animal {
             return true;
         if (obj.getClass() == this.getClass()) {
             Animal animal = (Animal) obj;
-            if (animal.name == this.name && animal.age == this.age)
+            if (animal.name.equals(this.name) && animal.age == this.age)
                 return true;
         }
         return false;
     }
+    public void voice(){};
 
-    void dyingVoice(){}
+    public void dyingVoice(){
+        System.out.println("животное умерает!");
+    }
 
 
     @Override
